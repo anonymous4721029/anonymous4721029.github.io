@@ -48,7 +48,34 @@ Explain models and the evaluation measure rhythm correction cost (<font color="#
         <h3>Bad examples</h3>
         Examples in which the merged-output HMM performed worse than other HMMs.
 
-        <h4>Example 1 [Bach: The well tempered clavier book II No. 19 A-dur Fugue]</h4>
+
+        <h4><font color="#0000cc">Example 1</font> (Bach: Two-part invention No. 1 C-dur)</h4>
+
+        <h5>・Input performance ( <a href="audio/1-1.mp3">mp3</a>　<a href="audio/1-1.mid">MIDI</a> )</h5>
+        <img src="images/1-1.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Correct transcription (original score) ( <a href="audio/1.mp3">mp3</a>　<a href="audio/1.mid">MIDI</a> )</h5>
+        <img src="images/1.png" width="1000" alt="Picture"/>
+        <br>
+        Upper staff:  <a href="audio/1_R.mp3">mp3</a>　<a href="audio/1_R.mid">MIDI</a><br>
+        Lower staff:  <a href="audio/1_L.mp3">mp3</a>　<a href="audio/1_L.mid">MIDI</a><br>
+
+        <h5>・Result by merged-output HMM ( Upper staff: <a href="audio/1-1_MOHMM_R.mp3">mp3</a>　<a href="audio/1-1_MOHMM_R.mid">MIDI</a>　　Lower staff: <a href="audio/1-1_MOHMM_L.mp3">mp3</a>　<a href="audio/1-1_MOHMM_L.mid">MIDI</a> )　<font color="#ff0080">RCC = 2</font></h5>
+        <img src="images/1-1_MOHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by note HMM ( <a href="audio/1-1_NoteHMM.mp3">mp3</a>　<a href="audio/1-1_NoteHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 0</font></h5>
+        <img src="images/1-1_NoteHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by metrical HMM ( <a href="audio/1-1_MetricalHMM.mp3">mp3</a>　<a href="audio/1-1_MetricalHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 0</font></h5>
+        <img src="images/1-1_MetricalHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <br>
+
+        <h4><font color="#0000cc">Example 2</font> (Bach: The well tempered clavier book II No. 19 A-dur Fugue)</h4>
 
         <h5>・Input performance ( <a href="audio/5-1.mp3">mp3</a>　<a href="audio/5-1.mid">MIDI</a> )</h5>
         <img src="images/5-1.png" width="1000" alt="Picture"/>
