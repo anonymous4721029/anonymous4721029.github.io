@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Demo page</title>
+
+   <style>
+      ul.pub {line-height: 20px;}
+      ul.pub li {margin-bottom: 10px;}
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">Polyphonic rhythm transcription</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+
+        <h2>Abstract</h2>
+
+Explain models and the evaluation measure rhythm correction cost (<font color="#ff0080">RCC</font>).
+
+        <h3>References</h3>
+        　[1] Merged-output HMM submitted to SMC 2016.<br>
+        　[2] Raphael, Hamanaka<br>
+        　[3] Otsuki, Takeda<br>
+
+
+        <h2>Demonstrations</h2>
+
+        <h3>Good examples</h3>
+        Examples in which the merged-output HMM outperformed other HMMs.
+
+
+        <h3>Bad examples</h3>
+        Examples in which the merged-output HMM performed worse than other HMMs.
+
+        <h4>Example 1 [Bach: The well tempered clavier book II No. 19 A-dur Fugue]</h4>
+
+        <h5>・Input performance ( <a href="audio/5-1.mp3">mp3</a>　<a href="audio/5-1.mid">MIDI</a> )</h5>
+        <img src="images/5-1.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Correct transcription (original score) ( <a href="audio/5.mp3">mp3</a>　<a href="audio/5.mid">MIDI</a> )</h5>
+        <img src="images/5.png" width="1000" alt="Picture"/>
+        <br>
+        Upper staff:  <a href="audio/5_R.mp3">mp3</a>　<a href="audio/5_R.mid">MIDI</a><br>
+        Lower staff:  <a href="audio/5_L.mp3">mp3</a>　<a href="audio/5_L.mid">MIDI</a><br>
+
+        <h5>・Result by merged-output HMM ( Upper staff: <a href="audio/5-1_MOHMM_R.mp3">mp3</a>　<a href="audio/5-1_MOHMM_R.mid">MIDI</a>　　Lower staff: <a href="audio/5-1_MOHMM_L.mp3">mp3</a>　<a href="audio/5-1_MOHMM_L.mid">MIDI</a> )　<font color="#ff0080">RCC = 5</font></h5>
+        <img src="images/5-1_MOHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by note HMM ( <a href="audio/5-1_NoteHMM.mp3">mp3</a>　<a href="audio/5-1_NoteHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 2</font></h5>
+        <img src="images/5-1_NoteHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by metrical HMM ( <a href="audio/5-1_MetricalHMM.mp3">mp3</a>　<a href="audio/5-1_MetricalHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 0</font></h5>
+        <img src="images/5-1_MetricalHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+
+  </body>
+</html>
+
