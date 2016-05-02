@@ -34,7 +34,7 @@
 A rhythm trancription algorithm converts a MIDI performance to a music score representation. We show results of comparing three HMM-based algorithms; <strong><font color="#005B50">note HMM</font></strong> [1,2], <strong><font color="#005B50">metrical HMM</font></strong> [3,4], and <strong><font color="#005B50">merged-output HMM</font></strong> [5]. As an evaluation measure, we use the rhythm correction cost (<font color="#ff0080">RCC</font>), which is defined as the least number of operations to correct an estimated result. For details, see our paper [5].
 
         <h3>References</h3>
-        　[1] T. Otsuki, N. Saitou, M. Nakai, H. Shimodaira, S. Sagayama, "Musical Rhythm Recognition Using Hidden Markov Model (in Japanese),'' J. Information Processing Society of Japan, 43(2), pp. 245-255, 2002.<br>
+        　[1] T. Otsuki, N. Saitou, M. Nakai, H. Shimodaira and S. Sagayama, "Musical Rhythm Recognition Using Hidden Markov Model (in Japanese),'' J. Information Processing Society of Japan, 43(2), pp. 245-255, 2002.<br>
         　[2] H. Takeda, T. Nishimoto and S. Sagayama, "Rhythm and Tempo Analysis Toward Automatic Music Transcription,'' Proc. ICASSP, vol. 4, pp. 1317-1320, 2007.<br>
         　[3] C. Raphael, "Automated Rhythm Transcription,'' Proc. ISMIR, pp. 99-107, 2001.<br>
         　[4] M. Hamanaka, M. Goto, H. Asoh and N. Otsu, "A Learning-Based Quantization: Unsupervised Estimation of the Model Parameters,'' Proc. ICMC, pp. 369-372, 2003.<br>
@@ -42,17 +42,96 @@ A rhythm trancription algorithm converts a MIDI performance to a music score rep
 
         <h2>Demonstrations</h2>
 
-Examples of rhythm transcription are shown. Each algorithm outputs quantised score times of the notes in an input MIDI performance. Score typesetting (e.g. beaming) is done manually to make the results clearer. For the merged-output HMM, the notes are grouped into two voices, which are shown in the upper and lower staves. 
+Examples of rhythm transcription are shown. Each algorithm outputs quantised score times of the notes in an input MIDI performance. Score typesetting (e.g. beaming) is done manually to make the results clearer. For the merged-output HMM, the notes are grouped into two voices shown in the upper and lower staves. 
 
         <h3>Good examples</h3>
-        Examples in which the merged-output HMM outperformed other HMMs.
+        Examples in which the merged-output HMM outperformed the other HMMs. These examples contain 2 against 3 or 3 against 4 polyrhythms.
+
+
+        <h4><font color="#0000cc">Example 1</font> (Chopin: Fantaisie Impromptu)</h4>
+
+        <h5>・Input performance ( <a href="audio/20-1.mp3">mp3</a>　<a href="audio/20-1.mid">MIDI</a> )</h5>
+        <img src="images/20-1.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Correct transcription (original score) ( <a href="audio/20.mp3">mp3</a>　<a href="audio/20.mid">MIDI</a> )</h5>
+        <img src="images/20.png" width="1000" alt="Picture"/>
+        <br>
+        Upper staff:  <a href="audio/20_R.mp3">mp3</a>　<a href="audio/20_R.mid">MIDI</a><br>
+        Lower staff:  <a href="audio/20_L.mp3">mp3</a>　<a href="audio/20_L.mid">MIDI</a><br>
+
+        <h5>・Result by merged-output HMM ( Upper staff: <a href="audio/20-1_MOHMM_R.mp3">mp3</a>　<a href="audio/20-1_MOHMM_R.mid">MIDI</a>　　Lower staff: <a href="audio/20-1_MOHMM_L.mp3">mp3</a>　<a href="audio/20-1_MOHMM_L.mid">MIDI</a> )　<font color="#ff0080">RCC = 7</font></h5>
+        <img src="images/20-1_MOHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by note HMM ( <a href="audio/20-1_NoteHMM.mp3">mp3</a>　<a href="audio/20-1_NoteHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 66</font></h5>
+        <img src="images/20-1_NoteHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by metrical HMM ( <a href="audio/20-1_MetricalHMM.mp3">mp3</a>　<a href="audio/20-1_MetricalHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 64</font></h5>
+        <img src="images/20-1_MetricalHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <br>
+
+        <h4><font color="#0000cc">Example 2</font> (Debussy: Arabesque No. 1)</h4>
+
+        <h5>・Input performance ( <a href="audio/27-1.mp3">mp3</a>　<a href="audio/27-1.mid">MIDI</a> )</h5>
+        <img src="images/27-1.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Correct transcription (original score) ( <a href="audio/27.mp3">mp3</a>　<a href="audio/27.mid">MIDI</a> )</h5>
+        <img src="images/27.png" width="1000" alt="Picture"/>
+        <br>
+        Upper staff:  <a href="audio/27_R.mp3">mp3</a>　<a href="audio/27_R.mid">MIDI</a><br>
+        Lower staff:  <a href="audio/27_L.mp3">mp3</a>　<a href="audio/27_L.mid">MIDI</a><br>
+
+        <h5>・Result by merged-output HMM ( Upper staff: <a href="audio/27-1_MOHMM_R.mp3">mp3</a>　<a href="audio/27-1_MOHMM_R.mid">MIDI</a>　　Lower staff: <a href="audio/27-1_MOHMM_L.mp3">mp3</a>　<a href="audio/27-1_MOHMM_L.mid">MIDI</a> )　<font color="#ff0080">RCC = 1</font></h5>
+        <img src="images/27-1_MOHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by note HMM ( <a href="audio/27-1_NoteHMM.mp3">mp3</a>　<a href="audio/27-1_NoteHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 12</font></h5>
+        <img src="images/27-1_NoteHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by metrical HMM ( <a href="audio/27-1_MetricalHMM.mp3">mp3</a>　<a href="audio/27-1_MetricalHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 12</font></h5>
+        <img src="images/27-1_MetricalHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <br>
+
+        <h4><font color="#0000cc">Example 3</font> (Beethoven: 32 Variations, Var. 9)</h4>
+
+        <h5>・Input performance ( <a href="audio/34-1.mp3">mp3</a>　<a href="audio/34-1.mid">MIDI</a> )</h5>
+        <img src="images/34-1.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Correct transcription ( <a href="audio/34.mp3">mp3</a>　<a href="audio/34.mid">MIDI</a> )</h5>
+        <img src="images/34.png" width="1000" alt="Picture"/>
+        <br>
+        Upper staff:  <a href="audio/34_R.mp3">mp3</a>　<a href="audio/34_R.mid">MIDI</a><br>
+        Lower staff:  <a href="audio/34_L.mp3">mp3</a>　<a href="audio/34_L.mid">MIDI</a><br>
+
+        <h5>・Result by merged-output HMM ( Upper staff: <a href="audio/34-1_MOHMM_R.mp3">mp3</a>　<a href="audio/34-1_MOHMM_R.mid">MIDI</a>　　Lower staff: <a href="audio/34-1_MOHMM_L.mp3">mp3</a>　<a href="audio/34-1_MOHMM_L.mid">MIDI</a> )　<font color="#ff0080">RCC = 7</font></h5>
+        <img src="images/34-1_MOHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by note HMM ( <a href="audio/34-1_NoteHMM.mp3">mp3</a>　<a href="audio/34-1_NoteHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 75</font></h5>
+        <img src="images/34-1_NoteHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <h5>・Result by metrical HMM ( <a href="audio/34-1_MetricalHMM.mp3">mp3</a>　<a href="audio/34-1_MetricalHMM.mid">MIDI</a> )　<font color="#ff0080">RCC = 96</font></h5>
+        <img src="images/34-1_MetricalHMM.png" width="1000" alt="Picture"/>
+        <br>
+
+        <br>
 
 
         <h3>Bad examples</h3>
-        Examples in which the merged-output HMM performed worse than other HMMs.
+        Examples in which the merged-output HMM performed worse than the other HMMs.
 
 
-        <h4><font color="#0000cc">Example 1</font> (Bach: Two-part invention No. 1 C-dur)</h4>
+        <h4><font color="#0000cc">Example 4</font> (Bach: Two-part invention No. 1 C-dur)</h4>
 
         <h5>・Input performance ( <a href="audio/1-1.mp3">mp3</a>　<a href="audio/1-1.mid">MIDI</a> )</h5>
         <img src="images/1-1.png" width="1000" alt="Picture"/>
@@ -78,7 +157,7 @@ Examples of rhythm transcription are shown. Each algorithm outputs quantised sco
 
         <br>
 
-        <h4><font color="#0000cc">Example 2</font> (Bach: The well tempered clavier book II No. 19 A-dur Fugue)</h4>
+        <h4><font color="#0000cc">Example 5</font> (Bach: The well tempered clavier book II No. 19 A-dur Fugue)</h4>
 
         <h5>・Input performance ( <a href="audio/5-1.mp3">mp3</a>　<a href="audio/5-1.mid">MIDI</a> )</h5>
         <img src="images/5-1.png" width="1000" alt="Picture"/>
