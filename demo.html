@@ -8,9 +8,11 @@
 
     <title>Demo page</title>
 
-   <style>
+    <style>
       ul.pub {line-height: 20px;}
       ul.pub li {margin-bottom: 10px;}
+      ol.multi-column {float: left; width: 100%; line-height: 20px;}
+      ol.multi-column li {float: left; width: 50%; margin-bottom: 10px;}
     </style>
 
   </head>
@@ -31,7 +33,7 @@
 
         <h2>Abstract</h2>
 
-A rhythm trancription algorithm converts a MIDI performance to a music score representation. We show results of comparing three HMM-based algorithms; <strong><font color="#005B50">note HMM</font></strong> [1,2], <strong><font color="#005B50">metrical HMM</font></strong> [3,4], and <strong><font color="#005B50">merged-output HMM</font></strong> [5]. As an evaluation measure, we use the rhythm correction cost (<font color="#ff0080">RCC</font>), which is defined as the least number of operations to correct an estimated result. For details, see our paper [5].
+A rhythm trancription algorithm converts a MIDI performance to a music score representation. We show results of comparing three HMM-based algorithms; <strong><font color="#005B50">note HMM</font></strong> [1,2], <strong><font color="#005B50">metrical HMM</font></strong> [3,4], and <strong><font color="#005B50">merged-output HMM</font></strong> [5]. As an evaluation measure, we use the rhythm correction cost (<font color="#ff0080">RCC</font>), which is defined as the least number of operations to correct an estimated result. For details, see our paper [5,6].
 
         <h3>References</h3>
         　[1] T. Otsuki, N. Saitou, M. Nakai, H. Shimodaira and S. Sagayama, "Musical Rhythm Recognition Using Hidden Markov Model (in Japanese)," J. Information Processing Society of Japan, 43(2), pp. 245-255, 2002.<br>
@@ -39,6 +41,31 @@ A rhythm trancription algorithm converts a MIDI performance to a music score rep
         　[3] C. Raphael, "Automated Rhythm Transcription," Proc. ISMIR, pp. 99-107, 2001.<br>
         　[4] M. Hamanaka, M. Goto, H. Asoh and N. Otsu, "A Learning-Based Quantization: Unsupervised Estimation of the Model Parameters," Proc. ICMC, pp. 369-372, 2003.<br>
         　[5] E. Nakamura, K. Yoshii and S. Sagayama, "Rhythm Transcription of Polyphonic MIDI Performances Based on a Merged-Output HMM for Multiple Voices," Proc. SMC, to appear, 2016.<br>
+        　[6] E. Nakamura, K. Yoshii and S. Sagayama, "Rhythm Transcription of Polyphonic Piano Music Based on Merged-Output HMM for Multiple Voices," submitted to ACM/IEEE TASLP.<br>
+
+        <h2>Data list</h2>
+
+The used data consist of two sets, the <strong><font color="#005B50">polyrhythmic data set</font></strong> and the <strong><font color="#005B50">standard polyphonic data set</font></strong>, each of which contains 30 excerpts of classical piano music. The polyrhythmic data set
+
+        <h3>Polyrhythmic data set</h3>
+
+        <ol class="multi-column">
+        </ol>
+
+        <h3>Standard polyphony data set</h3>
+
+        <ol class="multi-column">
+          <li>Bach: Invention No. 1 Bar 15-
+          <li>Bach: Invention No. 2 Bar 19-
+          <li>Bach: Well Tempered Clavier Book 1 Prelude No. 13 Bar 24-
+          <li>Bach: Well Tempered Clavier Book 2 Fugue No. 2 Bar 14-
+          <li>Bach: Well Tempered Clavier Book 2 Fugue No. 19 Bar 1-
+          <li>Bartok: Romanian Dance No. 2 Bar 1-
+          <li>Bartok: Romanian Dance No. 4 Bar 1-
+          <li>Beethoven: Piano Sonata No. 14 Mov. 1 Bar 1-
+          <li>Beethoven: Piano Sonata No. 14 Mov. 2 Bar 1-
+          <li>Beethoven: Piano Sonata No. 14 Mov. 2 Bar 56-
+        </ol>
 
         <h2>Demonstrations</h2>
 
