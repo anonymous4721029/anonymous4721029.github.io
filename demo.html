@@ -33,19 +33,22 @@
 
         <h2>Abstract</h2>
 
-A rhythm trancription algorithm converts a MIDI performance to a music score representation. We show results of comparing three HMM-based algorithms; <strong><font color="#005B50">note HMM</font></strong> [1,2], <strong><font color="#005B50">metrical HMM</font></strong> [3,4], and <strong><font color="#005B50">merged-output HMM</font></strong> [5]. As an evaluation measure, we use the rhythm correction cost (<font color="#ff0080">RCC</font>), which is defined as the least number of operations to correct an estimated result. For details, see our paper [5,6].
+A rhythm transcription algorithm converts a MIDI performance to a music score representation. We show results of comparing three HMM-based algorithms; <strong><font color="#005B50">note HMM</font></strong> [1,2], <strong><font color="#005B50">metrical HMM</font></strong> [3,4], and <strong><font color="#005B50">merged-output HMM</font></strong> [5]. As an evaluation measure, we use the rhythm correction cost (<font color="#ff0080">RCC</font>), which is defined as the least number of operations to correct an estimated result. For details, see our paper [5,6].<br>
+<br>
+You can <font color="#ff0080">download programming codes</font> and see the list of training data <a href="algorithms.html">here</a>.
+
 
         <h3>References</h3>
         　[1] T. Otsuki, N. Saitou, M. Nakai, H. Shimodaira and S. Sagayama, "Musical Rhythm Recognition Using Hidden Markov Model (in Japanese)," J. Information Processing Society of Japan, 43(2), pp. 245-255, 2002.<br>
         　[2] H. Takeda, T. Nishimoto and S. Sagayama, "Rhythm and Tempo Analysis Toward Automatic Music Transcription," Proc. ICASSP, vol. 4, pp. 1317-1320, 2007.<br>
         　[3] C. Raphael, "Automated Rhythm Transcription," Proc. ISMIR, pp. 99-107, 2001.<br>
         　[4] M. Hamanaka, M. Goto, H. Asoh and N. Otsu, "A Learning-Based Quantization: Unsupervised Estimation of the Model Parameters," Proc. ICMC, pp. 369-372, 2003.<br>
-        　[5] E. Nakamura, K. Yoshii and S. Sagayama, "Rhythm Transcription of Polyphonic MIDI Performances Based on a Merged-Output HMM for Multiple Voices," Proc. SMC, to appear, 2016.<br>
+        　[5] E. Nakamura, K. Yoshii and S. Sagayama, "Rhythm Transcription of Polyphonic MIDI Performances Based on a Merged-Output HMM for Multiple Voices," Proc. SMC, pp. 338-343, 2016.<br>
         　[6] E. Nakamura, K. Yoshii and S. Sagayama, "Rhythm Transcription of Polyphonic Piano Music Based on Merged-Output HMM for Multiple Voices," submitted to ACM/IEEE TASLP.<br>
 
-        <h2>Data list</h2>
+        <h2>Test data sets</h2>
 
-The used data consist of two sets, the <strong><font color="#005B50">polyrhythmic data set</font></strong> and the <strong><font color="#005B50">standard polyphonic data set</font></strong>, each of which contains 30 excerpts of classical piano music. The polyrhythmic data set is composed of pieces that contained 2 against 3 or 3 against 4 polyrhythmic passages, and the standard polyphonic data set is composed of pieces that did not contain polyrhythmic passages.
+The used data consist of two sets, the <strong><font color="#005B50">polyrhythmic data set</font></strong> and the <strong><font color="#005B50">non-polyrhythmic data set</font></strong>, each of which contains 30 excerpts of classical piano music. The polyrhythmic data set is composed of pieces that contained 2 against 3 or 3 against 4 polyrhythmic passages, and the non-polyrhythmic data set is composed of pieces that did not contain polyrhythmic passages.
 
         <h3>Polyrhythmic data set</h3>
 
@@ -82,7 +85,7 @@ The used data consist of two sets, the <strong><font color="#005B50">polyrhythmi
           <li>Ravel: Jeu d'Eau Bar 46-47
         </ol>
 
-        <h3>Standard polyphony data set</h3>
+        <h3>Non-polyrhythmic data set</h3>
 
         <ol class="multi-column">
           <li>Bach: Invention No. 1 Bar 15-18
@@ -257,7 +260,21 @@ Examples of rhythm transcription are shown. Each algorithm outputs quantised sco
         <img src="images/5-1_MetricalHMM.png" width="1000" alt="Picture"/>
         <br>
 
+        <h2>Contact</h2>
+          <a href="http://eita-nakamura.github.io">Eita Nakamura</a><br>
+          Research Bldg. No. 7 Room 417, Yoshida-honmachi, Sakyo-ku, Kyoto 606-8501, Japan<br>
+          <strong>e-mail:</strong> enakamura[at]sap.ist.i.kyoto-u.ac[dot]jp<br>
+          <strong>phone:</strong> +81-075-753-4952<br>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Maintained by Eita Nakamura　　　　(Last updated: 2016 Dec)</p>
+      </footer>
+    </div>
 
   </body>
 </html>
-
